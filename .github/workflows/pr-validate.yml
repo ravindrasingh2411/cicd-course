@@ -1,12 +1,15 @@
-name: Validate UAT Deployment
+name: Validate PR
 on:
-  push:
+  pull_request:
+    types:
+      - opened
+      - synchronize
     paths:
       - force-app/**
     branches:
       - main
 jobs:
-  validate-uat-deployment:
+  validate-pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v3
