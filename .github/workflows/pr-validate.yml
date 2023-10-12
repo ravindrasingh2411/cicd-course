@@ -1,4 +1,5 @@
 name: Validate PR
+runs-on: self-hosted
 on:
   pull_request:
     types:
